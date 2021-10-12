@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>on/off</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="light">
+        <div class="wire"></div>
+        <div class="onea"></div>
+        <div class="oneb"></div>
+        <div class="onec"></div>
+        <div class="bulb">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="switch"><p>Syska</p>
+            <div class="btn"></div>
+        </div>
+    </div>
+    <audio id="audio" src="switch-10.mp3" autostart="false"></audio>
+    <script>
+        let btn = document.querySelector('.btn');
+        let body = document.querySelector('body');
+        let audio = document.querySelector('#audio');  
+        btn.onclick = function(){
+            body.classList.toggle('on');
+            audio.play();
+        }
+    </script>
+    <div class="day">
+        <div class="wire1"></div>
+        <div class="two"></div>
+        <div class="twoa"></div>
+        <div class="twob"></div>
+        <div class="twoc"></div>
+        <div class="bulba">
+        <span></span>
+        <span></span>
+        </div>
+        <div class="switch1"><p>Havells</p>
+            <div class="btn1"></div>
+        </div>
+    </div>
+    <audio id="audio1" src="switch-10.mp3" autostart="false"></audio>
+    <script>
+        let btn1 = document.querySelector('.btn1');
+        let body1 = document.querySelector('body1');
+        let audio1 = document.querySelector('#audio1');
+        btn1.onclick = function(){
+            body.classList.toggle('on1');
+            audio1.play();
+        }
+    </script>
+    <div class="night">
+        <div class="wire2"></div>
+        <div class="three"></div>
+        <div class="threea"></div>
+        <div class="threeb"></div>
+        <div class="threec"></div>
+        <div class="bulbb">
+        <span></span>
+        <span></span> 
+        </div>
+        <div class="switch2"><p>LG</p>
+            <div class="btn2"></div>
+        </div>
+    </div>
+    <audio id="audio2" src="switch-10.mp3" autostart="false"></audio>
+    <script>
+        let btn2 = document.querySelector('.btn2');
+        let body2 = document.querySelector('body2');
+        let audio2 = document.querySelector('#audio2');
+        btn2.onclick = function(){
+            body.classList.toggle('on2');
+            audio2.play();
+        }
+    </script>
+    <div class="party">
+        <div class="wire3"></div>
+        <div class="Four"></div>
+        <div class="Foura"></div>
+        <div class="Fourb"></div>
+        <div class="Fourc"></div>
+        <div class="bulbc">
+        <span></span>
+        <span></span>
+    </div>
+    <div class="switch3"><p>Phillips</p>
+        <div class="btn3"></div>
+    </div>
+    <audio id="audio3" src="switch-10.mp3" autostart="false"></audio>
+    <script>
+        let btn3 = document.querySelector('.btn3');
+        let body3 = document.querySelector('body3');
+        let audio3 = document.querySelector('#audio3');
+        btn3.onclick = function(){
+            body.classList.toggle('on3');
+            audio3.play();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,712 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+body.on {
+    background: radial-gradient(#555,#111);
+}
+
+
+.onea {
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 180px;
+    right: 650px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: blue;    
+}
+
+.oneb {
+    position: absolute;
+    width: 59px;
+    height: 180px;
+    top: 280px;
+    left: 534px;
+    border-radius: 50%;
+    background: blue;
+}
+
+.onec{
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 180px;
+    left: 420px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: blue;
+}
+
+
+.bulb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #444;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+body.on .bulb {
+    background: #fff;
+    box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff;
+}
+
+.bulb::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: #444;
+    border-top: 30px solid #000;
+    border-radius: 10px;
+}
+
+body.on .bulb::before {
+    background: #fff;
+}
+
+body.on .bulb::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    filter: blur(40px);
+}
+
+.bulb span:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: -4px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(342deg);
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px #444;
+}
+
+body.on .bulb span:nth-child(1) {
+    box-shadow: 20px 20px 0 10px #fff;
+}
+
+.bulb span:nth-child(2) {
+    position: absolute;
+    top: -16px;
+    right: -1px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(19deg);
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 40px #444;
+}
+
+body.on .bulb span:nth-child(2) {
+    box-shadow: -20px 20px 0 10px #fff;
+}
+
+.wire {
+    position: absolute;
+    left: calc(50% -2px);
+    bottom: 290px;
+    left: 561px;
+    width: 4px;
+    height: 600px;
+    background: #000;
+    z-index: 1;
+}
+
+.switch {
+    color: blue;
+    position: absolute;
+    bottom: 50px;
+    right: 795px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(blue,#eee, blue);
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch .btn {
+    position: relative;
+    width: 25px;
+    height: 40px;
+    background: linear-gradient(#777,#fff,#777);
+    border-radius: 6px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.switch .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff,#fff);
+    border-radius: 4px;
+}
+
+.on .switch .btn::before {
+    top: 15%;
+}
+
+#audio {
+    display: none;
+}
+
+body.on1 {
+    background: radial-gradient(#555,#111);
+}
+
+.two {
+    position: absolute;
+    width: 60px;
+    height: 150px;
+    bottom: 280px;
+    left: 863px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.twoa {
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 227px;
+    right: 325px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: red;    
+}
+
+.twob {
+    position: absolute;
+    width: 59px;
+    height: 160px;
+    top: 380px;
+    left: 862px;
+    border-radius: 50%;
+    background: red;
+}
+
+.twoc{
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 225px;
+    right: 480px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: red;
+}
+
+.bulba {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: 50px;
+    background: #444;
+    border-radius: 50%;
+    left: 250px;
+}
+
+body.on1 .bulba {
+    background: #fff;
+    box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff;
+}
+
+body.on1 .bulba::before {
+    background: #fff;
+}
+
+.bulba::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: #444;
+    border-top: 30px solid #000;
+    border-radius: 10px;
+}
+
+body.on1 .bulba::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    filter: blur(40px);
+}
+
+.bulba span:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: -4px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(342deg);
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px #444;
+}
+
+body.on1 .bulba span:nth-child(1) {
+    box-shadow: 20px 20px 0 10px #fff;
+}
+
+.bulba span:nth-child(2) {
+    position: absolute;
+    top: -16px;
+    right: -1px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(19deg);
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 40px #444;
+}
+
+body.on1 .bulba span:nth-child(2) {
+    box-shadow: -20px 20px 0 10px #fff;
+}
+
+.wire1 {
+    position: absolute;
+    left: calc(50% -2px);
+    bottom: 290px;
+    left: 891px;
+    width: 4px;
+    height: 1000px;
+    background: black;
+}
+
+.switch1 {
+    color: red;
+    position: absolute;
+    bottom: 50px;
+    right: 515px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(red, #ccc, red);
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch1 .btn1 {
+    position: relative;
+    width: 25px;
+    height: 40px;
+    background: linear-gradient(#777,#fff,#777);
+    border-radius: 6px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.switch1 .btn1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff,#fff);
+    border-radius: 4px;
+}
+
+.on1 .switch1 .btn1::before {
+    top: 15%;
+}
+
+#audio1 {
+    display: none;
+}
+
+body.on3 {
+    background: radial-gradient(#555,#111);
+}
+
+.three {
+    position: absolute;
+    width: 60px;
+    height: 150px;
+    bottom: 280px;
+    right: 1113px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.threea {
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 225px;
+    left: 85px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: green;    
+}
+
+.threeb {
+    position: absolute;
+    width: 59px;
+    height: 160px;
+    top: 380px;
+    left: 195px;
+    border-radius: 50%;
+    background: green;
+}
+
+.threec {
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 225px;
+    left: 225px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: green;
+}
+
+.bulbb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #444;
+    border-radius: 50%;
+    right: 500px;
+    top: 50px;
+}
+
+body.on2 .bulbb {
+    background: #fff;
+    box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff;
+}
+
+body.on2 .bulbb::before {
+    background: #fff;
+}
+.bulbb::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: #444;
+    border-top: 30px solid #000;
+    border-radius: 10px;
+}
+
+body.on2 .bulbb::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    filter: blur(40px);
+}
+.bulbb span:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: -4px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(342deg);
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px #444;
+}
+
+body.on2 .bulbb span:nth-child(1) {
+    box-shadow: 20px 20px 0 10px #fff;
+}
+
+.bulbb span:nth-child(2) {
+    position: absolute;
+    top: -16px;
+    right: -1px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(19deg);
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 40px #444;
+}
+
+body.on2 .bulbb span:nth-child(2) {
+    box-shadow: -20px 20px 0 10px #fff;
+}
+
+.wire2 {
+    position: absolute;
+    left: calc(50% -2px);
+    bottom: 290px;
+    left: 1201px;
+    width: 4px;
+    height: 540px;
+    background: black;
+}
+
+.switch2 {
+    font-style: italic;
+    color: green;
+    position: absolute;
+    bottom: 50px;
+    right: 1185px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(green, #ccc, green);
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch2 .btn2 {
+    position: relative;
+    width: 25px;
+    height: 30px;
+    background: linear-gradient(#777,#fff,#777);
+    border-radius: 6px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.switch2 .btn2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff,#fff);
+    border-radius: 4px;
+}
+
+.on2 .switch2 .btn2::before {
+    top: 15%;
+}
+
+#audio2 {
+    display: none;
+}
+
+body.on4 {
+    background: radial-gradient(#555,#111);
+}
+
+.Four {
+    position: absolute;
+    width: 60px;
+    height: 150px;
+    bottom: 327px;
+    left: 1175px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.Foura {
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 180px;
+    left: 1055px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: purple;    
+}
+
+.Fourb {
+    position: absolute;
+    width: 59px;
+    height: 160px;
+    top: 310px;
+    left: 1178px;
+    border-radius: 50%;
+    background: purple;
+}
+
+.Fourc {
+    position: absolute;
+    width: 150px;
+    height: 270px;
+    top: 175px;
+    left: 1190px;
+    border-radius: 50%;
+    transform: rotateX(80deg);
+    background: purple;
+}
+.bulbc {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #444;
+    border-radius: 50%;
+    left: 400px;
+    
+}
+
+body.on3 .bulbc::before {
+    background: #fff;
+}
+
+body.on3 .bulbc {
+    background: #fff;
+    box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff;
+}
+
+
+.bulbc::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: #444;
+    border-top: 30px solid #000;
+    border-radius: 10px;
+}
+
+body.on3 .bulbc::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    filter: blur(40px);
+}
+.bulbc span:nth-child(1) {
+    position: absolute;
+    display: block;
+    top: -16px;
+    left: -4px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(342deg);
+    border-bottom-right-radius: 40px;
+    box-shadow: 20px 20px 0 10px #444;
+}
+
+body.on3 .bulbc span:nth-child(1) {
+    box-shadow: 20px 20px 0 10px #fff;
+}
+
+.bulbc span:nth-child(2) {
+    position: absolute;
+    top: -16px;
+    right: -1px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(19deg);
+    border-bottom-left-radius: 40px;
+    box-shadow: -20px 20px 40px #444;
+}
+
+body.on3 .bulbc span:nth-child(2) {
+    box-shadow: -20px 20px 0 10px #fff;
+}
+.wire3 {
+    position: absolute;
+    left: calc(50% -2px);
+    bottom: 352px;
+    left: 221px;
+    width: 4px;
+    height: 600px;
+    background: #000;
+}
+
+.switch3 {
+    font-style: oblique;
+    color: purple;
+    position: absolute;
+    bottom: 50px;
+    right: 115px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(purple, #ccc, purple);
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch3 .btn3 {
+    color: green;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(#777,#fff,#777);
+    border-radius: 50px;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.switch3 .btn3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(#fff,#fff);
+    border-radius: 4px;
+}
+
+.on3 .switch3 .btn3::before {
+    top: 15%;
+}
+
+#audio3 {
+    display: none;
+}
